@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Issue Tracker</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body onload="getIssues()">
+	<div class="container">
+      <h1>Issue Tracker</h1>
+      <div class="jumbotron">
+        <h3>Project Name: Random Project</h3>
+        <h4>Add New Issue:</h4>
+        <form id="issueInputForm">
+          <div class="form-group">
+            <label for="issueTypeInput">Select type:</label>
+             <select class="form-control" id="issueTypeInput">
+              <option value="Feature">Feature</option>
+              <option value="Bug">Bug</option>
+              <option value="Task">Task</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="issueNameInput">Name:</label>
+            <input type="text" class="form-control" id="issueNameInput" placeholder="Enter a name for the issue">
+          <div class="form-group">
+            <label for="issueDescInput">Description:</label>
+            <input type="text" class="form-control" id="issueDescInput" placeholder="Enter a description">
+          </div>
+          <div class="form-group">
+            <label for="issueCommentInput">Comment:</label>
+            <input type="text" class="form-control" id="issueCommentInput" placeholder="Enter additional comments">
+          </div>
+          <div class="form-group">
+            <label for="issueTaskInput">Add a Task:</label>
+            <input type="text" class="form-control" id="issueTaskInput" placeholder="Add a task">
+          </div>
+          </div>
+          <div class="form-group">
+            <label for="issueCreatedByInput">Asignee:</label>
+            <input type="text" class="form-control" id="issueCreatedByInput" placeholder="Enter a user name">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+      </div>
+
+			<div class="container">
+	      <div class="row">
+	        <div class="col-md-2">
+						<h4>New</h4>
+						<div id="newCol" class="col-style">
+							<div id="issuesList"></div>
+						</div>
+	        </div>
+					<div class="col-md-2">
+						<h4>In progress</h4>
+						<div id="inProgressCol" class="col-style">
+						</div>
+					</div>
+					<div class="col-md-2">
+						<h4>Feedback</h4>
+						<div id="feedbackCol" class="col-style">
+						</div>
+					</div>
+					<div class="col-md-2">
+						<h4>Rework</h4>
+						<div id="reworkCol" class="col-style">
+						</div>
+					</div>
+					<div class="col-md-2">
+						<h4>Resolved</h4>
+						<div id="resolvedCol" class="col-style">
+						</div>
+					</div>
+					<div class="col-md-2">
+						<h4>Ready for Testing</h4>
+						<div id="testingCol" class="col-style">
+						</div>
+					</div>
+	      </div>
+			</div>
+
+      <div class="footer">
+        <p>&copy done by Radu Fulea</p>
+      </div>
+
+    </div>
+
+	<script src="https://chancejs.com/chance.min.js"></script>
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="main.js"></script>
+</body>
+</html>
